@@ -10,7 +10,7 @@ interface Props {
 const { title, description } = Astro.props;
 
 const menus = [
-    { name: "Inicio", href: "/" },
+    { name: "Inicio", href: getBaseUrl() + "/" },
     {
         name: "Fretnote Trainer",
         href: getBaseUrl() + "/fretnote-trainer",
