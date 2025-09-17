@@ -5,6 +5,10 @@ import preact from "@astrojs/preact";
 import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
+
+  site: "https://felipevogtf.github.io",
+  base: "/guitar-things/",
+
   vite: {
     plugins: [tailwindcss()],
   },
