@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { getBaseUrl } from "@utils/baseUrl";
 
 interface Props {
     title: string;
@@ -10,7 +11,11 @@ const { title, description } = Astro.props;
 
 const menus = [
     { name: "Inicio", href: "/" },
-    { name: "Fretnote Trainer", href: "/fretnote-trainer", icon: "guitar" },
+    {
+        name: "Fretnote Trainer",
+        href: getBaseUrl() + "/fretnote-trainer",
+        icon: "guitar",
+    },
 ];
 ---
 

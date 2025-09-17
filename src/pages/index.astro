@@ -1,13 +1,20 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
-
+import { getBaseUrl } from "@utils/baseUrl";
 const menus = [
-    { name: "Fretnote Trainer", href: "/fretnote-trainer", icon: "guitar" },
+    {
+        name: "Fretnote Trainer",
+        href: getBaseUrl() + "/fretnote-trainer",
+        icon: "guitar",
+    },
 ];
 ---
 
-<Layout title="Guitar Things" description="This is a collection of tools to help you learn and practice guitar">
+<Layout
+    title="Guitar Things"
+    description="This is a collection of tools to help you learn and practice guitar"
+>
     <h1 class="text-3xl font-bold text-gray-700 mt-4 mb-2">Guitar Things</h1>
 
     <p>This is a collection of tools to help you learn and practice guitar.</p>
