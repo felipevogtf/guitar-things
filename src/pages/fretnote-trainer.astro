@@ -1,0 +1,21 @@
+---
+import Layout from "@layouts/Layout.astro";
+import FretnoteTrainerComponent from "@components/fretnote-trainer/FretnoteTrainer";
+---
+
+<Layout
+    title="Fretnote Trainer"
+    description="Practice identifying notes on the guitar fretboard"
+>
+    <h1 class="text-3xl font-bold text-gray-700 mb-4 mt-8">Fretnote Trainer</h1>
+    <p class="mb-6">Practice identifying notes on the guitar fretboard.</p>
+    <FretnoteTrainerComponent client:load>
+        <div slot="fallback" class="flex flex-col items-center gap-4 p-8">
+            <div
+                class="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-700"
+            >
+            </div>
+            <p class="text-gray-600">Cargando entrenador...</p>
+        </div>
+    </FretnoteTrainerComponent>
+</Layout>

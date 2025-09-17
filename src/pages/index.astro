@@ -1,16 +1,34 @@
 ---
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 
+const menus = [
+    { name: "Fretnote Trainer", href: "/fretnote-trainer", icon: "guitar" },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Guitar Things" description="This is a collection of tools to help you learn and practice guitar">
+    <h1 class="text-3xl font-bold text-gray-700 mt-4 mb-2">Guitar Things</h1>
+
+    <p>This is a collection of tools to help you learn and practice guitar.</p>
+
+    <div class="flex flex-row gap-2 mt-4">
+        {
+            menus.map((menu) => (
+                <a
+                    class="p-6 rounded-lg flex flex-col items-center bg-gray-200 hover:bg-gray-300 text-gray-700"
+                    href={menu.href}
+                >
+                    <Icon name={menu.icon} class="text-xl" />
+                    <span>{menu.name}</span>
+                </a>
+            ))
+        }
+    </div>
+</Layout>
+
+<style>
+    [data-icon] {
+        font-size: 3rem;
+    }
+</style>
